@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ2</title>
+</head>
+<body>
+    <script>
+
+        operator = prompt(`Что будем делать`,`Умножение,деление,прибавление или вычитание`)
+        a = +prompt('Первое число')
+        b = +prompt('Второе число')
+        let c = a
+        switch(operator){
+            case `Умножение` :
+                    a *= b ;
+                    alert(`Результат: ${c} * ${b} = ${a}`) ;
+                    break; 
+                case `деление` :
+                    a /= b ;
+                    alert(`Результат: ${c} / ${b} = ${a}`) ;
+                    break;
+                case `прибавление` :
+                    a += b ;
+                    alert(`Результат: ${c} + ${b} = ${a}`) ;
+                    break;
+                case `вычитание` :
+                    a -= b ;
+                    alert(`Результат: ${c} - ${b} = ${a}`) ;
+                    break;
+                default :
+                    a = false;
+                    alert(`Результат: ${a}`) ;
+                    break;
+        }      
+    </script>
+</body>
+</html>

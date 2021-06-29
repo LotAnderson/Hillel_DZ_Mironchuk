@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ11</title>
+</head>
+<body>
+    <script>
+        let a = +prompt(`Enter a (Use dots,not comas)`);
+        let check = true ;
+        for ( let x = 2 ; x < a ; x ++ ){
+            if( ( a % x ) == 0 ){
+                check = false;
+            }
+        }
+        if ( check == true && a % 1 == 0 ){
+            alert("Число " + a + "простое");
+        }
+        else {
+            alert("Число " + a + " не простое");
+        }
+            </script>
+</body>
+</html>

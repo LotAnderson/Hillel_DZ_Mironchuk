@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_11</title>
+</head>
+<body>
+    <script>
+        //Вы написали,чтобы мы использовали тернарные (я так до сих пор и не понял до конца,что это значит),ну ок...Нафиг Иф Элс...
+        let a = +prompt(`Enter a :`) ;
+        let b = +prompt(`Enter b :`) ;
+        let proverka = ( a <= 1 && b >= 3 ) ;
+        //alert(proverka);
+        switch(proverka){
+            case true :
+                alert( a + b );
+                break
+            default :
+                alert( a - b );
+                break
+        }
+    </script>
+</body>
+</html>

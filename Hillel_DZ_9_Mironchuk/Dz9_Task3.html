@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9_3</title>
+</head>
+<body>
+    <script>
+        let num = prompt(`Введите целое число`);
+        let length = num.length
+        if ( num < 0){
+            length --;
+            switch(length){
+                case 1 :
+                    alert( "Число " + num + " однозначное отрицательное" );
+                    break
+                case 2 :
+                    alert( "Число " + num + " двухзначное отрицательное" );
+                    break
+                case 3 :
+                    alert( "Число " + num + " трёхзначное отрицательное" );
+                    break
+                default:
+                    alert( "Число " + num + " многозначное отрицательное" );
+                    break
+            }
+        }
+        else {
+            switch(length){
+                case 1 :
+                    alert( "Число " + num + " однозначное положительное" );
+                    break
+                case 2 :
+                    alert( "Число " + num + " двухзначное положительное" );
+                    break
+                case 3 :
+                    alert( "Число " + num + " трёхзначное положительное" );
+                    break
+                default:
+                    alert( "Число " + num + " многозначное положительное" );
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

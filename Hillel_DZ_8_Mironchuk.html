@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ8</title>
+</head>
+<body>
+    <script>
+            let age = prompt(`Введи свой возраст`);
+            if ( age == 0 ){
+                alert(`Жаль,что ты не сказал,сколько тебе`);
+            }
+            else {
+                let city = prompt(`А где ты живёшь?`);
+                if ( city == 0 ){ 
+                    alert(`Жаль,что ты не сказал,где ты живёшь`);
+                }
+                else{
+                    switch(city){
+                        case `Москва` :
+                            alert('Ты живешь в столице России');
+                            break
+                        case `Mинск` :
+                            alert('Ты живешь в столице Беларуси');
+                            break
+                        case `Киев` :
+                            alert('Ты живешь в столице Украины');
+                            break
+                        default :
+                            alert('Жалко,что плохо знаю географию,так бы сказал страну,где ты живёшь');
+                            break
+                    }
+                    let kindOfSport = prompt(`Какой вид спорта ты любишь`);
+                    if ( kindOfSport == 0 ){
+                        alert(`Жаль,что ты не сказал,какой спорт тебе нравится`);
+                    }
+                    else{
+                        switch( kindOfSport ){
+                            case `Баскетбол` :
+                            alert('Круто,хочешь стать,как Майкл Джордан');
+                            break
+                        case `Футбол` :
+                            alert('Круто,хочешь стать,как Лионель Месси');
+                            break
+                        case `Киев` :
+                            alert('Круто,хочешь стать,как Майкл Фелпс');
+                            break
+                        default :
+                            alert('Жалко,что плохо разбираюсь в спорте,так бы сказал чемпиона в этом виде спорта');
+                            break
+                        }
+                    }
+                }
+            }
+        
+    </script>
+</body>
+</html>

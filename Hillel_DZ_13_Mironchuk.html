@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ13</title>
+</head>
+<body>
+    <script>
+
+        let number = +prompt(`Enter num :`);
+        let power = +prompt(`Enter power :`);
+
+        function exponentiating(number,power = 1){
+            if ( (isNaN(number) == true || isNaN(power) == true) ){
+                let checkResult = `Error 418`;
+                return checkResult;
+            }
+            return Math.pow(number,power);          
+        }
+        let result = exponentiating(number,power) ; 
+        alert( result );
+    </script> 
+</body>
+</html>

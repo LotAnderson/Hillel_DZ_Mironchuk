@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_2</title>
+</head>
+<body>
+    <script>
+        const user = {
+            name: "John"
+        };
+
+// это будет работать?
+
+        user.name = "Pete";
+        console.log(user);
+// Да, потому что свойство объекта,а не значение(видимо);
+// я поменял скобки ,которые печатаються в ворде на скобки,которые вопринимает js
+// Вот исходник:
+/*const user = {
+
+name: «John»
+
+};
+
+// это будет работать?
+
+user.name = «Pete»;*/
+    </script>
+</body>
+</html>

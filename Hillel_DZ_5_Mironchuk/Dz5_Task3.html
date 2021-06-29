@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_3</title>
+</head>
+<body>
+        <script>
+        //Задание:
+        /* У нас есть объект, в котором хранятся зарплаты нашей команды:
+
+    let salaries = {
+
+    John: 100,
+
+    Ann: 160,
+
+    Pete: 130
+
+    }
+
+    Напишите код для суммирования всех зарплат и сохраните результат в переменной sum
+    */
+    let salaries = {
+
+        John: 100,
+
+        Ann: 160,
+
+        Pete: 130
+
+
+    }
+        let sum = 0 ;//думаю,здесь можно  просто объявить её как переменную типа ${названиеПеременнойДляМаленькихЧисел}(вспомнил,как намбер)
+    for (var svoistvo in salaries) {
+        sum = sum + salaries[svoistvo] ;
+    }
+    console.log(sum);
+    //немного покопался,чтобы функция была более универсальной:она теперь считает сумму независимо от названия и количества свойств объекта salaries 
+    </script>
+</body>
+</html>
