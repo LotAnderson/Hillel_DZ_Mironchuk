@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ14</title>
+</head>
+<body>
+    <script>
+
+        let string = String(prompt(`Enter str:`));
+        let amount = +prompt(`Enter num:`);
+        let symbol = String(prompt(`Enter symbol:`));
+        let fromRight = confirm(`From right?`);
+
+        function myPadString(string,amount,symbol,fromRight = right){
+            // проверка
+            if ( typeof(string) != `string` || typeof(amount) != `number` || typeof(symbol) != `string` || symbol.length > 1 || typeof(fromRight) != `boolean` || string.length == amount ){
+                return false;
+            };
+            
+            console.log(string);
+            console.log(string.length);
+            console.log(amount);
+            console.log(amount-string.length);
+            let strLength = string.length;
+            // если строка больше,чем хотелось бы
+            if ( string.length > amount ){
+                string = string.substr(0, amount );
+                return string ;
+            }
+            //если меньше
+            else{
+                //if from right
+                if ( fromRight == true ){
+                    for ( let i = 0 ; i < ( amount - strLength ) ; i ++ ){
+                        console.log(i);
+                        string += symbol;
+                        console.log(string);
+                    }  
+                }   
+                // if from left
+                else {
+                    for ( let i = 0 ; i < ( amount - strLength ) ; i ++ ){
+                        console.log(i);
+                        string = symbol + string ;
+                        console.log(string);
+                    }                        
+                }
+                    return string;
+                
+            } 
+            
+
+
+
+        }
+
+
+
+
+
+
+
+
+        alert(myPadString(string,amount,symbol,fromRight));
+    </script>
+</body>
+</html>
