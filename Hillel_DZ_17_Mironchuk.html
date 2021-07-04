@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_17</title>
+</head>
+<body>
+    <script>
+        let amount = +prompt(`How big?`)
+        let a = String();
+            let gaps = ``;let symbols = `*`;
+            while( gaps.length <= amount){
+                gaps += ` `;
+            };
+        for ( let i = 1 ; i <= amount ; i ++ ){
+            while( symbols.length < i * 2 - 2 ){
+                symbols += `**`;
+            };
+           a += gaps.substr(0,amount-i)  + symbols + `\n` ;
+        } 
+       console.log(a);
+    </script>
+</body>
+</html>
