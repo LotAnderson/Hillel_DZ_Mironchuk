@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_19</title>
+</head>
+<body>
+    <script>
+        //Даны координаты точки A(x = 4, y = 9) и радиус окружности (R = 10) с центром в начале координат. Используя тернарный оператор напишите код, который будет выводить сообщение о том, лежит ли данная точка внутри окружности или за её пределами. Для извлечения квадратного корня из числа z вам понадобится метод Math.sqrt(z).
+        //Подсказка: Длина гипотенузы находится по теореме Пифагора
+        let xA = 4 ;
+        let yA = 9 ;
+        let radiusOfTheCircleWhichCenterIsLocatedInTheMiddleOfTheOriginOfCoordinates = 10 ; //Я знал,что Вам зайдёт название XD ;
+        //Розв'язання:Нехай OA - Відрізок з початкук коодинат до точки А.Якщо відрізок меньший або дорівнює радіусу,то точка належить колу.
+        let segment = xA ** 2 + yA ** 2;
+        //Якщо ні - то не належить!
+        Math.sqrt(segment) <= radiusOfTheCircleWhichCenterIsLocatedInTheMiddleOfTheOriginOfCoordinates ? alert('Принадлежит!') : alert('Не Принадлежит!');
+    </script>
+</body>
+</html>
