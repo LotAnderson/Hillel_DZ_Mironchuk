@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_18</title>
+</head>
+<body>
+    <script>
+        let age = prompt(`How old are you?`);
+        let ageRest = age % 10 ;
+        let str = String()
+        switch(ageRest){
+            case 0 :
+                str = `лет` ;
+                break
+            case -0 :
+                str = `лет` ;
+                break
+            case 1 :
+                str = `год`;
+                break
+            case -1 :
+                str = `год`;
+                break
+            case 2 :
+                str = `года`;
+                break
+            case -2 :
+                str = `года`;
+                break
+            case 3 :
+                str = `года`;
+                break
+            case -3 :
+                str = `года`;
+                break
+            case 4 :
+                str = `года`;
+                break
+            case -4 :
+                str = `года`;
+                break
+            case 5 :
+                str = `лет`;
+                break
+            case -5 :
+                str = `лет`;
+                break
+            case 6 :
+                str = `лет`;
+                break
+            case -6 :
+                str = `лет`;
+                break
+            case -7 :
+                str = `лет`;
+                break
+            case 7 :
+                str = `лет`;
+                break
+            case 8 :
+                str = `лет`;
+                break
+            case -8 :
+                str = `лет`;
+                break
+            case 9 :
+                str = `лет`;
+                break
+            case -9 :
+                str = `лет`;
+                break
+        }
+        if ( age == 11 || age == 12 || age == 13 || age == 14 ){ str = `лет`};
+        alert(`Тебе ` + age + ` ` + str + `. Поздравляю!!!!!`)
+    </script>
+</body>
+</html>
