@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function counter(x){
+        //     let counter = Number();
+        //     counter += x;
+        //     return counter
+        // }
+
+        // (function increase(){
+        //     counter(1);
+        // })();
+
+        // (function decrease(){
+        //     counter(-1);
+        // })();
+
+        // (function get(){
+        //     return console.log(counter(0));
+        // })();
+
+         let cb = {
+                increaseCB : function(arg){
+                    return console.log(`inc` + arg) 
+                },
+                decreaseCB : function(arg){
+                    return console.log(`dec` + arg)
+                },
+                getCB : function(arg){
+                    return  console.log(`get` +arg)
+                }
+            }
+        function counter ( x = 0, cb  ,incC = 1 , decC = 1 ,incCA = 1 , decCA = 1) {
+            let counter = x;
+            
+
+            function increase(){
+                // cb.increaseCB(counter + incC);
+                
+                // return counter + incC ;
+                return cb?.increaseCB ? cb.increaseCB(counter + incC) : counter + incC
+            }
+            
+            function decrease(){
+                cb.decreaseCB(counter + decC);
+                return counter - decC ;
+            }
+
+            function get(){
+                cb.getCB(counter)
+                return counter
+            }
+            for ( let i = 0 ; i < incCA ; i++){
+                increase()
+            }
+            for ( let i = 0 ; i < decCA ; i++){
+                decrease();
+            }
+            
+            return {
+                increase,
+                decrease,
+                get
+            }
+        };
+        let hiCounter = counter(97,cb,105,33,5,9);
+        console.log(hiCounter.increase())
+        console.log(hiCounter.increase())        
+        console.log(hiCounter.increase())
+        console.log(hiCounter.decrease())
+        console.log(hiCounter.decrease())        
+        console.log(hiCounter.get())
+    </script>
+</body>
+</html>

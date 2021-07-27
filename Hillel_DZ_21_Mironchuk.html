@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_21</title>
+</head>
+<body>
+    <script>
+        //Task 1
+        let arr = [ `a` , `b` , `c` , `d` ];
+        document.write(`Task 1 : ` + arr[0] + `+` + arr[1] + `,` + arr[2] + `+` + arr[3] );
+
+        //Task 2
+        arr = [ 2 , 5 , 3 , 9 ];
+        let result = ( arr[0] * arr[1] ) + ( arr[2] * arr[3] );
+        document.write(`<br>Task 2 : ` + result);
+
+        //Task 3
+        arr = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+        document.write(`<br>Task 3 : ` + arr[1][0]);
+
+        //Task 4
+        let obj = {
+            js : [`jQuery` , `Angular`],
+            php : `hello`,
+            css : `world`
+        }
+        document.write(`<br>Task 4 : ` + obj.js[0]);
+
+        //Task 5 
+        (function veryFunctionalArray(){
+            let arr = Array();
+            let str = String();
+            for (let i = 1 ; i <= 11 ; i ++){
+                str += `x`
+                arr.push(str)
+            }
+            document.write(`<br>Task 5 : ` + arr)
+        })();
+
+        //Task 6
+        (function veryFunctionalArray2(){//Не красиво :(
+            let arr = Array();
+            let str = String();
+            for (let i = 1 ; i <= 11 ; i ++){
+                
+                function cb (arg){
+                    for (let i = 1 ; i <= arg ; i ++){
+                        str += String(arg) ;
+                    }
+                }
+
+                cb(i)
+                arr.push(str)
+               str = ``;
+            }
+            document.write(`<br>Task 6 : ` + arr)
+        })();
+
+        //Task 7
+        (function veryFunctionalArray3(symbol,length){ //Он же arrayFill()
+            let arr = Array();
+            for (let i = 1 ; i <= length ; i ++){
+                arr.push(symbol)
+            }
+            document.write(`<br>Task 7 : ` + arr)
+        })(`x` , 12);
+
+        //Task 8
+        arr = [1,89,900,-3123,5,67];
+        let sum = Number();
+        for( let i = 0 ; sum < 10 ; i ++ ){
+            sum += arr[i]
+            if ( sum >= 10){
+                document.write(`<br>Task 8 : ` + (i+1))
+            }
+        }
+
+        //Task 9
+        arr = [1,89,900,-3123,5,67];
+        for( let i = 0 ; i < (arr.length / 2) ; i ++ ){
+            arr[i] = [ arr[arr.length - 1 - i] , arr[arr.length - 1 - i] = arr[ i ]][0];
+        }
+        //Красиво
+        document.write(`<br>Task 9 : ` + (arr))
+
+        //Task 10
+        arr = [[1, 2, 3], [4, 5], [6]];
+        let r = 0 ;
+        document.write(`<br>Task 10 : ` + arr.reduce(function(sum = 0, elem) {
+            for ( let i = 0 ; i < arr[r].length ; i ++){
+                sum += Number(arr[r][i]);
+            }
+            r ++;
+            return sum ;
+        }, 0))
+
+        //Task 11
+        arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+        function recurcion ( arr , sum = 0) {
+            function iNeedAnEasierArray(arr){
+                for (let index = 0; index < arr.length; index++) {
+                    if(Array.isArray(arr[index]) === true && Array.isArray(arr[index+1]) === true ){
+                        arr[index] = arr[index].concat(arr[index+1]);
+                        arr.splice(index+1,1)
+                    }
+                }
+                
+            };
+            iNeedAnEasierArray(arr);
+            arr = arr[0];
+            iNeedAnEasierArray(arr);
+            iNeedAnEasierArray(arr);
+            arr = arr[0];
+            arr.forEach(element => sum+=element);
+            return sum
+        };
+        document.write(`<br>Task 11 : ` + recurcion(arr))
+    </script>
+</body>
+</html>
