@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_23</title>
+</head>
+<body>
+    <script>
+        //Task 1 : 
+        function getFactorial(num,currentF = 1){
+            currentF *= num
+            return num === 1 ? currentF : getFactorial( num - 1 , currentF)//Красиво конечно,ничего не скажешь
+        }
+        document.write(`Task 1 : ` + getFactorial(7) );
+        
+        //Task 2 :
+        function superPower( num , power , currentNum = num){//Мне нужен был currentNum
+            currentNum *= num ;
+            return power === 1 ? currentNum : superPower( num , power - 1 , currentNum)
+        }
+        document.write(`<br>Task 2 : ` + superPower( 191 , 36 ) );
+
+        //Task 3 : 
+        function veryUsefulFunc( a , b ){
+            a++;
+            b--;
+            return b === 0 ? a : veryUsefulFunc( a++ ,b--)
+        }
+        document.write(`<br>Task 2 : ` + veryUsefulFunc( 191 , 37 ) );
+    </script>
+</body>
+</html>
