@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_24</title>
+</head>
+<body>
+    
+    <script>
+        function palindrom( num ,popitka = 0 , numR , sum , sumR){
+            popitka ++ ;
+            numR = Number(String(Array(String(num).split(``))[0].reverse()).split(',').join(''));
+            sum = num + numR ;
+            sumR = Number(String(Array(String(sum).split(``))[0].reverse()).split(',').join(''))
+            if ( sum === sumR){
+                return {
+                    sum,
+                    popitka
+                }
+            }
+            else{
+                  return palindrom( sum , popitka)
+            }
+        }
+        let a = +prompt(`From what number would like like to get a palindrom?`)
+    console.log(`Palindrom from is : `);
+    console.log(palindrom(a))
+    
+    </script>
+</body>
+</html>
