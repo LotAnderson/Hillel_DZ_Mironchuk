@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_25</title>
+</head>
+<body>
+    <script>
+        // function zamikaniya(a){
+        //     return function(b){
+        //         return a+b
+        //     }
+        // }
+        
+        // let add = zamikaniya(0);
+        // console.log(add(3))
+        // console.log(add(7))
+
+
+        let sum = (function(num) {
+            let currentNum = 0;
+            return function(num) {
+                currentNum += num;
+                return currentNum;
+                }
+            
+        })();
+
+
+        document.write(`Первый вызов ф-ции с num = ` + 7 + ', скрытый счетчик равен ' + sum(7));
+        
+        document.write(`<br>Затем num равен ` + 79 + ',скрытый счетчик равен ' + sum(97));
+        
+        document.write(`<br>Третий вызов: num равен ` + 87 + ',скрытый счетчик равен ' + sum(87));
+    </script> 
+</body>
+</html>
