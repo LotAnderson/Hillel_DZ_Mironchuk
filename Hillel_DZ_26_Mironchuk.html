@@ -12,18 +12,6 @@
             let arr = [];
                 
                 return function(){
-                    
-                    // for (let index = 0; index < 1; index++) {
-                    //         // console.log( num)
-                    //         // console.log(arr)
-                    //         // console.log(is())
-                    //     if (is()=== false){
-                    //         arr.push(num);
-                    //     }
-                    //         // console.log(arr)
-                    //     function is(){if(arr[index]=== num)return true
-                    //     else return false}   
-                    // }
                     function generation(){
                         console.log(arr.length)
                         if (arr.length > 99) return `Всё,у меня горит hdd`
@@ -32,11 +20,9 @@
                         function isTheSame(element) {
                             return (element === num);
                         }
-                        // if (arr.length === 10) return false
                         if(arr.some(isTheSame) === true){return generation()}
                         return num
                     };
-                    // if( generation() === false){return arr}
                     arr.push(generation())
                     
 
@@ -45,11 +31,6 @@
                 }
             
         })();
-
-
-
-
-        
         for( let i = 0 ; i < 100 ; i ++)console.log(generateRandomNum());
     </script>
 </body>
