@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         let cb = {
+                increaseCB : function(arg){
+                    return console.log(`inc : ` + arg) 
+                },
+                decreaseCB : function(arg){
+                    return console.log(`dec : ` + arg)
+                },
+                getCB : function(arg){
+                    return  console.log(`get : ` +arg)
+                }
+            }
+        function counter ( x = 0, cb ) {
+            let counter = x;
+            let increaseCounter = Number();
+            let decreaseCounter = Number();
+            let getCounter = Number();
+
+            function increase(){
+                ++ increaseCounter;
+                console.log(`increaseCounter : ` + increaseCounter);
+                cb.increaseCB(counter ++);
+                return counter ++ ;
+                // return cb?.increaseCB ? cb.increaseCB(counter + incC) : counter + incC
+            }
+            
+            function decrease(){
+                ++ decreaseCounter;
+                
+            console.log(`decreaseCounter : ` +  decreaseCounter);
+                cb.decreaseCB(counter --);
+                return counter --;
+            }
+            function getStatistic(){
+                return {
+                    increaseCounter,
+                    decreaseCounter,
+                    getCounter
+                }
+            }
+
+            function get(){
+                ++ getCounter
+                console.log(`getCounter : ` + getCounter)
+                cb.getCB(counter)
+                return counter
+            }
+            
+            function fullNaZiro(){
+                increaseCounter = 0 ;
+                decreaseCounter = 0;
+                getCounter = 0;
+                return `mission passed`
+            }
+
+            return {
+                increase,
+                decrease,
+                getStatistic,
+                fullNaZiro,
+                get
+            }
+        };
+        let hiCounter = counter(97,cb);
+        console.log(hiCounter.increase())
+        console.log(hiCounter.increase())        
+        console.log(hiCounter.increase())
+        console.log(hiCounter.increase())
+        console.log(hiCounter.increase())        
+        console.log(hiCounter.increase())
+        console.log(hiCounter.increase())
+        console.log(hiCounter.increase())        
+        console.log(hiCounter.increase())
+        console.log(hiCounter.decrease())
+        console.log(hiCounter.decrease())        
+        console.log(hiCounter.get())
+        console.log(hiCounter.getStatistic())
+        console.log(hiCounter.fullNaZiro())
+        console.log(hiCounter.getStatistic())
+    </script>
+</body>
+</html>
