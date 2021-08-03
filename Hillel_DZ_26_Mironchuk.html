@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_26</title>
+</head>
+<body>
+    <script>
+        let generateRandomNum =(function(){
+            let arr = [];
+                
+                return function(){
+                    
+                    // for (let index = 0; index < 1; index++) {
+                    //         // console.log( num)
+                    //         // console.log(arr)
+                    //         // console.log(is())
+                    //     if (is()=== false){
+                    //         arr.push(num);
+                    //     }
+                    //         // console.log(arr)
+                    //     function is(){if(arr[index]=== num)return true
+                    //     else return false}   
+                    // }
+                    function generation(){
+                        console.log(arr.length)
+                        if (arr.length > 99) return `Всё,у меня горит hdd`
+                        let num = Number();
+                        num = Math.floor(Math.random() * 100)
+                        function isTheSame(element) {
+                            return (element === num);
+                        }
+                        // if (arr.length === 10) return false
+                        if(arr.some(isTheSame) === true){return generation()}
+                        return num
+                    };
+                    // if( generation() === false){return arr}
+                    arr.push(generation())
+                    
+
+                    
+                    return arr
+                }
+            
+        })();
+
+
+
+
+        
+        for( let i = 0 ; i < 100 ; i ++)console.log(generateRandomNum());
+    </script>
+</body>
+</html>
