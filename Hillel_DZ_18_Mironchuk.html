@@ -8,73 +8,13 @@
 </head>
 <body>
     <script>
-        let age = prompt(`How old are you?`);
+        let age = prompt(`How old are you?(num only , >= 0 only , !== -0),(no ageshaming(age > 100 is possible))`);
+        
         let ageRest = age % 10 ;
-        let str = String()
-        switch(ageRest){
-            case 0 :
-                str = `лет` ;
-                break
-            case -0 :
-                str = `лет` ;
-                break
-            case 1 :
-                str = `год`;
-                break
-            case -1 :
-                str = `год`;
-                break
-            case 2 :
-                str = `года`;
-                break
-            case -2 :
-                str = `года`;
-                break
-            case 3 :
-                str = `года`;
-                break
-            case -3 :
-                str = `года`;
-                break
-            case 4 :
-                str = `года`;
-                break
-            case -4 :
-                str = `года`;
-                break
-            case 5 :
-                str = `лет`;
-                break
-            case -5 :
-                str = `лет`;
-                break
-            case 6 :
-                str = `лет`;
-                break
-            case -6 :
-                str = `лет`;
-                break
-            case -7 :
-                str = `лет`;
-                break
-            case 7 :
-                str = `лет`;
-                break
-            case 8 :
-                str = `лет`;
-                break
-            case -8 :
-                str = `лет`;
-                break
-            case 9 :
-                str = `лет`;
-                break
-            case -9 :
-                str = `лет`;
-                break
-        }
-        if ( age == 11 || age == 12 || age == 13 || age == 14 ){ str = `лет`};
-        alert(`Тебе ` + age + ` ` + str + `. Поздравляю!!!!!`)
+        if( isNaN(age) === true || age < 0 || String(age)===`-0` || age === `` || age === null) alert(`try again!!`)
+        else if ( age >= 11 && age < 14 ) alert (`Тебе ` + age + ` лет.`)
+        else if ( ageRest === 0 || (ageRest >= 5 && ageRest  <= 9)) alert(`Тебе ` + age + ` лет.`) 
+        else alert(`Тебе ` + age + ` года.`)
     </script>
 </body>
 </html>
