@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_29</title>
+</head>
+<body>
+    <script>
+        let calculator = {
+            arg1 : undefined,
+            arg2 : undefined ,
+            // read : function ( arg1 = +prompt(`Enter arg1 : `) , arg2 = +prompt(`Enter arg2 : `)){- Но нет,Вам же захотелось проверку :(
+            read : function(){
+                let arg1 = prompt(`Enter arg1 : `);
+                let arg2 = prompt(`Enter arg2 : `);
+                if ( isNaN(arg1) === true || isNaN(arg2) === true ) {
+                    this.arg1 = undefined;
+                    this.arg2 = undefined;
+                    return alert(`try again!!!!!!!!!!!!!!!!`)
+                }
+                
+                this.arg1 = arg1 ;
+                this.arg2 = arg2 ;
+            },
+            sum : function(){
+                if ( isNaN(this.arg1) === true || isNaN(this.arg2) === true ) return `try again!!!!!!!!!!!!!!!!`
+                else return (Number(this.arg1) + Number(this.arg2))
+            },
+            mul : function(){
+                if ( isNaN(this.arg1) === true || isNaN(this.arg2) === true ) return `try again!!!!!!!!!!!!!!!!`
+                else return (this.arg1 * this.arg2)
+            },
+            
+
+        }
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+    </script>
+</body>
+</html>
