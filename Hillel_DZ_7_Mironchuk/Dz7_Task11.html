@@ -8,19 +8,9 @@
 </head>
 <body>
     <script>
-        //Вы написали,чтобы мы использовали тернарные (я так до сих пор и не понял до конца,что это значит),ну ок...Нафиг Иф Элс...
         let a = +prompt(`Enter a :`) ;
         let b = +prompt(`Enter b :`) ;
-        let proverka = ( a <= 1 && b >= 3 ) ;
-        //alert(proverka);
-        switch(proverka){
-            case true :
-                alert( a + b );
-                break
-            default :
-                alert( a - b );
-                break
-        }
+        alert(( a <= 1 && b >= 3 ) ? a + b : a - b) 
     </script>
 </body>
 </html>
