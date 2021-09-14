@@ -25,6 +25,15 @@ console.log(links.message)
 console.log(form.email);
 form.button.addEventListener(`click`,(event) => {
     event.preventDefault();
+    if( links.email.value === '' || links.firstName.value === '' || links.nickName.value === '' || links.password.value === '' || links.option.value === '' || links.message.value === '' || links.confirm.value === '' || links.file.value === '' ){
+        links.firstName.value = '';
+        links.lastName.value = '';
+        links.nickName.value = '';
+        links.password.value = '';
+        links.message.value = '';
+        links.confirm.value = '';
+        links.file.value = '';
+        return alert(`Не все поля заполнены!!!!!!Попробуй еще раз`)}
     results.email = links.email.value ;
     results.firstName = links.firstName.value ;
     results.lastName = links.lastName.value ;
@@ -33,7 +42,7 @@ form.button.addEventListener(`click`,(event) => {
     results.option = links.option.value ;
     results.message = links.message.value ;
     results.confirm = links.confirm.checked ;
-    results.file = links.file.value ; 
+    results.file = links.file.value ;
     localStorage.setItem("requiredDataToBuildTheList", JSON.stringify(results));
     setTimeout(function(){
         location = 'file:///C:/Users/Admin/Desktop/Hillel_DZ_Mironchuk/files/list.html';
